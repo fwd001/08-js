@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .box {
+      width: 500px;
+      height: 400px;
+      margin: 100px auto;
+      border: 1px solid black;
+    }
+    .hd {
+      width: 100%;
+      height: 60px;
+      overflow: hidden;
+    }
+    .hd li {
+      height: 100%;
+      width: 25%;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      float: left;
+      background-color: pink;
+      cursor: pointer;
+    }
+    .hd li.now {
+      background-color: lime;
+    }
+    .bd div {
+      width: 100%;
+      height: 340px;
+      background-color: #ddd;
+      display: none;
+      text-align: center;
+      line-height: 340px;
+      font-size: 50px;
+    }
+    .bd div.current {
+      display: block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul class="hd" id="hd">
+      <li class="now">标题1</li>
+      <li>标题2</li>
+      <li>标题3</li>
+      <li>标题4</li>
+    </ul>
+    <div class="bd" id="bd">
+      <div class="current">内容1</div>
+      <div>内容2</div>
+      <div>内容3</div>
+      <div>内容4</div>
+      </div3>
+    </div>
+    <script>
+      var hd = document.getElementById('hd');
+      var lis = hd.getElementsByTagName('li');
+      var divs = document.querySelectorAll('#bd div');
+      var count = 0;
+      for(var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onclick = function () {
+          lis[count].className = '';
+          divs[count].className = '';
+          count = this.index;
+          this.className = 'now';
+          divs[count].className = 'current';
+        }
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .table {
+      width: 500px;
+      height: 300px;
+      border: 1px solid #333;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .th th {
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="table" border="1">
+    <thead class="th">
+      <th>111</th>
+      <th>222</th>
+      <th>333</th>
+      <th>444</th>
+      <th>555</th>
+    </thead>
+    <tbody class="tbody">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/jQuery-3.3.1.js"></script>
+  <script>
+    $('.tbody>tr:even').css('background', '#ccccff');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .a {
+      color: #ccc
+    }
+  </style>
+</head>
+<body>
+  <input type="text" value="aotuman" id="search" class="a">
+  <script>
+  
+    var search = document.getElementById('search');
+    search.onfocus = function () {
+      if (search.value == 'aotuman') {
+        search.value = '';
+        search.className = ''        
+      }
+    }
+    search.onblur = function () {
+      if (search.value == '') {
+        search.value = 'aotuman';
+        search.className = 'a'
+      }
+    }
+  </script>
+</body>
+</html>

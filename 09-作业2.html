@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div class="one">
+  <p>cc</p>
+  <div>
+    <p>ff</p>
+  </div>
+</div>
+
+<div class="two">
+  <p>gg</p>
+</div>
+
+<script>
+  //不允许增加任何的id和class的情况下
+  //1. 把cc改成  聪聪
+  //2. 把ff改成  飞飞
+  //3. 把gg改成  哥哥
+
+  var one = document.querySelector('.one');
+  var cc = one.getElementsByTagName('p')[0];
+  var ff = one.getElementsByTagName('p')[1];
+  var gg = document.querySelector('.two p');
+  cc.innerText = '聪聪';
+  ff.innerText = '飞飞';
+  gg.innerText = '哥哥';
+</script>
+
+<script>
+
+
+
+</script>
+
+</body>
+</html>

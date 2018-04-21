@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      height: 475px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+      position: relative;
+      text-align: center;
+    }
+
+    .box .hd {
+      position: absolute;
+      height: 37px;
+      line-height: 37px;
+      top: -39px;
+      left: -1px;
+      border: 1px solid #ccc;
+    }
+
+    .box .hd ul {
+      overflow: hidden;
+    }
+
+    .box .hd ul li {
+      float: left;
+      width: 80px;
+      height: 37px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .box .hd ul span {
+      height: 17px;
+      width: 1px;
+      background-color: #ccc;
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 8px;
+    }
+
+    .line {
+      width: 80px;
+      height: 3px;
+      background-color: orangered;
+      position: absolute;
+      top: 0;
+    }
+
+    .bd div {
+      display: none;
+    }
+
+    .bd div.current {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="hd">
+      <ul>
+        <li>国际大牌
+          <span></span>
+        </li>
+        <li>国妆名牌
+          <span></span>
+        </li>
+        <li>清洁用品
+          <span></span>
+        </li>
+        <li>男士精品</li>
+      </ul>
+      <div class="line"></div>
+    </div>
+    <div class="bd">
+      <div class="current">
+        <img src="imgs/guojidapai.jpg" alt="" width="1000">
+      </div>
+      <div>
+        <img src="imgs/guozhuangmingpin.jpg" alt="" width="1000">
+      </div>
+      <div>
+        <img src="imgs/nanshijingpin.jpg" alt="" width="1000">
+      </div>
+      <div>
+        <img src="imgs/qingjieyongpin.jpg" alt="" width="1000">
+      </div>
+    </div>
+  </div>
+  <script>
+    var lis = document.querySelectorAll('.box .hd ul li');
+    var divs = document.querySelectorAll('.bd div');
+    var line = document.querySelector('.line');
+    var count = 0;
+    
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].index = i;
+      lis[i].onmouseover = function () {
+        line.style.left = this.index * this.offsetWidth + 'px';
+        divs[count].className = '';
+        count = this.index;
+        divs[count].className = 'current';
+      }
+    }
+
+  </script>
+</body>
+
+</html>
