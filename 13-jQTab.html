@@ -26,6 +26,7 @@
     width: 25%;
     height: 100%;
     float: left;
+    cursor: pointer;
   }
   .box ul li:first-child {
    background-color: rgb(225, 85, 85);
@@ -79,7 +80,8 @@
   <script src="js/jQuery-3.3.1.js"></script>
   <script>
     var count = 0;
-    $('.box ul li').click(function(){
+    
+    $('.box ul li').mouseover(function(){
       var $index = $(this).index();
       $('.bd div')[count].className = '';
       $('.bd div')[$index].className = 'current';
