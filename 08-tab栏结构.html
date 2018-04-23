@@ -69,20 +69,50 @@
       </div3>
     </div>
     <script>
-      var hd = document.getElementById('hd');
-      var lis = hd.getElementsByTagName('li');
+
+      var lis = document.querySelectorAll('#hd li');
       var divs = document.querySelectorAll('#bd div');
       var count = 0;
-      for(var i = 0; i < lis.length; i++) {
+      var i = 0, len = lis.length;
+      for(; i < len; i++) {
         lis[i].index = i;
         lis[i].onclick = function () {
           lis[count].className = '';
           divs[count].className = '';
-          count = this.index;
+
           this.className = 'now';
-          divs[count].className = 'current';
+          divs[this.index].className = 'current';
+          
+          count = this.index;
         }
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // var hd = document.getElementById('hd');
+      // var lis = hd.getElementsByTagName('li');
+      // var divs = document.querySelectorAll('#bd div');
+      // var count = 0;
+      // for(var i = 0; i < lis.length; i++) {
+      //   lis[i].index = i;
+      //   lis[i].onclick = function () {
+      //     lis[count].className = '';
+      //     divs[count].className = '';
+      //     count = this.index;
+      //     this.className = 'now';
+      //     divs[count].className = 'current';
+      //   }
+      // }
     </script>
 </body>
 
