@@ -46,14 +46,13 @@
     .box .hd ul span {
       height: 17px;
       width: 1px;
+      float: left;
       background-color: #ccc;
-      position: absolute;
       margin-top: 10px;
-      margin-left: 8px;
     }
 
     .line {
-      width: 80px;
+      width: 81px;
       height: 3px;
       background-color: orangered;
       position: absolute;
@@ -75,14 +74,11 @@
     <div class="hd">
       <ul>
         <li>国际大牌
-          <span></span>
-        </li>
+        </li><span></span>
         <li>国妆名牌
-          <span></span>
-        </li>
+        </li><span></span>
         <li>清洁用品
-          <span></span>
-        </li>
+        </li><span></span>
         <li>男士精品</li>
       </ul>
       <div class="line"></div>
@@ -111,7 +107,7 @@
     for (var i = 0; i < lis.length; i++) {
       lis[i].index = i;
       lis[i].onmouseover = function () {
-        line.style.left = this.index * this.offsetWidth + 'px';
+        line.style.left = this.index * (this.offsetWidth + 1) + 'px';
         divs[count].className = '';
         count = this.index;
         divs[count].className = 'current';
